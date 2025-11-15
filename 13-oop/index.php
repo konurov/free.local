@@ -1,7 +1,7 @@
 <?php 
-// http://ie2.php.net/manual/ru/function.fwrite.php#refsect1-function.fwrite-examples
+
 error_reporting(-1);
-require_once 'File.php';
+require_once 'classes/Product.php';
 
 function debug($data){
     echo '<pre>' . print_r($data,1) . '</pre>';
@@ -16,12 +16,20 @@ function debug($data){
     <title>Document</title>
 </head>
 <body>
-    <?php 
-    //echo __DIR__;
-    $file = new File(__DIR__ . '/file.txt');
-    $file->write('Строка 1');
-    $file->write('Строка 2');
-    
-    ?>
+<?php 
+
+$productBook = new Product("40 хадис",450,null,250);
+$productnet = new Product("Asus",45000,"inter X6920",null);
+
+echo debug($productBook);
+echo debug($productnet);
+
+echo $productBook->getProduct('book');
+echo $productnet->getProduct();
+?>    
+
+
+
+
 </body>
 </html>
