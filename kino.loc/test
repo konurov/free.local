@@ -1,0 +1,5 @@
+composer require symfony/var-dumper --dev
+
+    composer require laravel/pint --dev
+    error : laravel/pint[v1.13.0, ..., v1.18.3] require php ^8.1.0 -> your php version (7.1.33) does not satisfy that requirement.
+composer update --ignore-platform-req=php
