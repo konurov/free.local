@@ -28,6 +28,10 @@ echo debug($productNet);
 
 echo $productBook->getProduct();
 echo $productNet->getProduct();
+
+$productBook1 = new Product("Чынгыз Айтматов 'Жамиля'",450,250);
+
+debug($productBook1);
 ?>    
 
 
